@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>เกม & เทคโนโลยี</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+    }
+
+    .modal.fade .modal-dialog {
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+
+    .modal.fade.show .modal-dialog {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .modal.fade .modal-dialog {
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+
+    .modal.fade.show .modal-dialog {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #ff512f, #dd2476, #ff512f, #ff512f);
+      background-size: 400% 400%;
+      animation: fireMove 6s ease infinite;
+    }
+
+    @keyframes fireMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+    .banner {
+    position: relative;
+    height: 300px;
+    background-image: url('/img/download_11.gif');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  .banner .overlay {
+    background: rgba(29, 8, 60, 0.6); 
+    padding: 30px;
+    text-align: center;
+    width: 958%;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  .banner h1 {
+    font-size: 3.5em;
+    margin: 0;
+    font-weight: 800;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  .banner p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+</style>
+</head>
+<body>
+  <header class="banner">
+    <div class="overlay d-flex align-items-center justify-content-center text-center">
+      <img src="img/dawd2.png" alt="Makiroll Logo" style="width: 200px; height: auto; margin-right: 15px;">
+      <div>
+        <h1>MAKIIROLL</h1>
+        <p>Roll เกมไหนก็ได้ ที่ MAKIIROLL</p>
+      </div>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="First Page.html"><i class="fas fa-home"></i>หน้าแรก</a></li>
+      <li><a href="News Page.html"><i class="fas fa-gamepad"></i>เกมมาแรง</a></li>
+      <li><a href="News Tech.html"><i class="fas fa-laptop"></i>เทคโนโลยีล่าสุด</a></li>
+      <li><a href="login.html"><i class="fas fa-sign-in-alt"></i>เข้าสู่ระบบ</a></li> 
+      <li><a href="ร้านค้า.html"><i class="fas fa-store"></i>ร้านค้า</a></li>
+    </ul>
+  </nav>  
+  <main class="container py-5">
+    <section id="product">
+      <h2 class="text-center mb-4">
+        <i class="bi bi-fire fire-icon"></i>
+        เกมยอดฮิตมาแรงช่วงนี้
+        <i class="bi bi-fire fire-icon"></i>
+      </h2>      
+      <div class="row g-4">
+
+        <!-- ELDEN RING -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img/game.jpg" class="card-img-top" alt="ELDEN RING">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">ELDEN RING</h5>
+              <p class="card-text">เกมที่ผสมผสานระหว่างดาร์กแฟนตาซีกับแอ็คชัน RPG พร้อมแผนที่กว้างและดันเจี้ยนลึกลับ!</p>
+              <a href="#" class="btn btn-primary mt-auto w-100" data-bs-toggle="modal" data-bs-target="#modalEldenRing">ดูเพิ่มเติม</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal ELDEN RING -->
+        <div class="modal fade" id="modalEldenRing" tabindex="-1" aria-labelledby="modalEldenRingLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalEldenRingLabel">ELDEN RING</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="ปิด"></button>
+              </div>
+              <div class="modal-body">
+                <img src="img/game.jpg" class="img-fluid mb-3" alt="ELDEN RING">
+                <p>
+                  *Elden Ring* เป็นเกมแนว Action RPG ที่พัฒนาโดย FromSoftware ร่วมมือกับ George R.R. Martin 
+                  ผู้เขียน Game of Thrones ในการสร้างโลกแห่งดาร์กแฟนตาซีสุดยิ่งใหญ่ ผู้เล่นจะได้สำรวจดินแดนลึกลับ,
+                  ต่อสู้กับบอสอันน่าเกรงขาม และเลือกเส้นทางของตนเองในโลกเปิดขนาดใหญ่
+                </p>
+                <ul>
+                  <li>ประเภท: Action RPG</li>
+                  <li>ผู้พัฒนา: FromSoftware</li>
+                  <li>วันวางจำหน่าย: 2025</li>
+                  <li>ราคาที่วางขาย: 1,490 บาท</li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                <a href="ร้านค้า.html" target="_blank" class="btn btn-success">
+                  <i class="bi bi-cart me-1"></i> ซื้อเกมนี้
+                </a>
+              </div>                   
+            </div>
+          </div>
+        </div>
+        <!-- Red Dead Redemption 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img/Red.jpg" class="card-img-top" alt="Red Dead Redemption 2">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Red Dead Redemption 2</h5>
+              <p class="card-text">เรื่องราวของอาร์เธอร์ มอร์แกน และแก๊งแวนเดอร์ลินด์ กับยุคแห่งการเปลี่ยนผ่าน...</p>
+              <a href="#" class="btn btn-primary mt-auto w-100" data-bs-toggle="modal" data-bs-target="#modalRDR2">ดูเพิ่มเติม</a>
+            </div>
+          </div>
+        </div>
+        <!-- Modal RDR2 -->
+        <div class="modal fade" id="modalRDR2" tabindex="-1" aria-labelledby="modalRDR2Label" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalRDR2Label">Red Dead Redemption 2</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="ปิด"></button>
+              </div>
+              <div class="modal-body">
+                <img src="img/Red.jpg" class="img-fluid mb-3" alt="Red Dead Redemption 2">
+                <p>
+                  *Red Dead Redemption 2* คือเกมแอ็คชันผจญภัยแนวคาวบอยที่เล่าเรื่องของ Arthur Morgan 
+                  และแก๊ง Van der Linde ในช่วงปลายยุคตะวันตก ผู้เล่นจะได้เผชิญกับการเลือกที่มีผลต่อเนื้อเรื่อง, 
+                  ธรรมชาติที่สมจริง และระบบเกมที่ลงลึก
+                </p>
+                <ul>
+                  <li>ประเภท: Action Adventure</li>
+                  <li>ผู้พัฒนา: Rockstar Games</li>
+                  <li>วันวางจำหน่าย: 2018</li>
+                  <li>ราคาที่วางขาย: 1,590 บาท</li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                <a href="ร้านค้า.html" target="_blank" class="btn btn-success">
+                  <i class="bi bi-cart me-1"></i> ซื้อเกมนี้
+                </a>
+              </div>                   
+            </div>
+          </div>
+        </div>
+        <!-- Monster Hunter Wilds -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img/Mon.jpg" class="card-img-top" alt="Monster Hunter Wilds">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Monster Hunter Wilds</h5>
+              <p class="card-text">โลกธรรมชาติที่เปลี่ยนแปลงตลอดเวลา กับเรื่องราวของมนุษย์และสัตว์ประหลาด</p>
+              <a href="#" class="btn btn-primary mt-auto w-100" data-bs-toggle="modal" data-bs-target="#modalMHW">ดูเพิ่มเติม</a>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Monster Hunter -->
+        <div class="modal fade" id="modalMHW" tabindex="-1" aria-labelledby="modalMHWLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalMHWLabel">Monster Hunter Wilds</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="ปิด"></button>
+              </div>
+              <div class="modal-body">
+                <img src="img/Mon.jpg" class="img-fluid mb-3" alt="Monster Hunter Wilds">
+                <p>
+                  *Monster Hunter Wilds* พาผู้เล่นเข้าสู่โลกธรรมชาติที่เปลี่ยนแปลงตลอดเวลา 
+                  ออกล่ามอนสเตอร์ขนาดยักษ์ พร้อมระบบต่อสู้ที่ปรับปรุงใหม่และการผสานเข้ากับสิ่งแวดล้อมอย่างสมจริง 
+                  เป็นภาคที่ขยายขอบเขตของซีรีส์ไปอีกขั้น
+                </p>
+                <ul>
+                  <li>ประเภท: Action RPG / Monster Hunting</li>
+                  <li>ผู้พัฒนา: Capcom</li>
+                  <li>วันวางจำหน่าย: 2025</li>
+                  <li>ราคาที่วางขาย: 1,790 บาท</li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+                <a href="ร้านค้า.html" target="_blank" class="btn btn-success">
+                  <i class="bi bi-cart me-1"></i> ซื้อเกมนี้
+                </a>
+              </div>                 
+            </div>
+          </div>
+        </div>
+        <!-- Final Fantasy VII Rebirth -->
+<div class="col-md-4">
+  <div class="card h-100 shadow-sm">
+    <img src="img/maxresdefault.jpg" class="card-img-top" alt="Final Fantasy VII Rebirth">
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">Final Fantasy VII Rebirth</h5>
+      <p class="card-text">การผจญภัยครั้งใหม่ของ Cloud และเพื่อน ๆ ในโลกที่กว้างใหญ่และน่าตื่นตา!</p>
+      <a href="#" class="btn btn-primary mt-auto w-100" data-bs-toggle="modal" data-bs-target="#modalFF7">ดูเพิ่มเติม</a>
+    </div>
+  </div>
+</div>
+<!-- Modal Final Fantasy VII Rebirth -->
+<div class="modal fade" id="modalFF7" tabindex="-1" aria-labelledby="modalFF7Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFF7Label">Final Fantasy VII Rebirth</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="ปิด"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/maxresdefault.jpg" class="img-fluid mb-3" alt="Final Fantasy VII Rebirth">
+        <p>
+          *Final Fantasy VII Rebirth* สานต่อเนื้อเรื่องอันเป็นตำนานของ Cloud และเพื่อน ๆ ในการต่อสู้กับองค์กร Shinra 
+          พร้อมโลกเปิดให้สำรวจที่ใหญ่ขึ้น ระบบต่อสู้ที่เร้าใจ และการเล่าเรื่องสุดเข้มข้น
+        </p>
+        <ul>
+          <li>ประเภท: JRPG</li>
+          <li>ผู้พัฒนา: Square Enix</li>
+          <li>วันวางจำหน่าย: 2025</li>
+          <li>ราคาที่วางขาย: 2,090 บาท</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+        <a href="ร้านค้า.html" target="_blank" class="btn btn-success">
+          <i class="bi bi-cart me-1"></i> ซื้อเกมนี้
+        </a>
+      </div>              
+    </div>
+  </div>
+</div>
+
+<!-- Tekken 8 -->
+<div class="col-md-4">
+  <div class="card h-100 shadow-sm">
+    <img src="img/header.jpg" class="card-img-top" alt="Tekken 8">
+    <div class="card-body d-flex flex-column">
+      <h5 class="card-title">Tekken 8</h5>
+      <p class="card-text">สุดยอดเกมไฟท์ติ้งแห่งปี การกลับมาของตำนานนักสู้ พร้อมกราฟิกระดับ Next-Gen!</p>
+      <a href="#" class="btn btn-primary mt-auto w-100" data-bs-toggle="modal" data-bs-target="#modalTekken8">ดูเพิ่มเติม</a>
+    </div>
+  </div>
+</div>
+<!-- Modal Tekken 8 -->
+<div class="modal fade" id="modalTekken8" tabindex="-1" aria-labelledby="modalTekken8Label" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTekken8Label">Tekken 8</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="ปิด"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/header.jpg" class="img-fluid mb-3" alt="Tekken 8">
+        <p>
+          *Tekken 8* กลับมาอีกครั้งในสงครามของสายเลือดระหว่าง Jin Kazama และ Kazuya Mishima 
+          ด้วยกราฟิก Unreal Engine 5 และระบบต่อสู้ใหม่ที่รวดเร็วเร้าใจมากขึ้น
+        </p>
+        <ul>
+          <li>ประเภท: Fighting</li>
+          <li>ผู้พัฒนา: Bandai Namco</li>
+          <li>วันวางจำหน่าย: 2024</li>
+          <li>ราคาที่วางขาย: 1,890 บาท</li>
+        </ul>
+      </div> 
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+        <a href="ร้านค้า.html" target="_blank" class="btn btn-success">
+          <i class="bi bi-cart me-1"></i> ซื้อเกมนี้
+        </a>
+      </div>              
+    </section>
+  </main>
+  <footer class="text-center py-4 text-white bg-dark">
+    <p>© 2025 Game & Technology - by MAKIROLL TEAM</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>เกม & เทคโนโลยี</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="First Page.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+  .main-image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .main-image img {
+    transition: opacity 0.4s ease-in-out;
+    opacity: 1;
+  }
+
+  .fade-out {
+    opacity: 0;
+  }
+
+  .fade-in {
+    opacity: 1;
+  }
+  
+  .banner {
+    position: relative;
+    height: 300px;
+    background-image: url('/img/download_11.gif');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  .banner .overlay {
+    background: rgba(29, 8, 60, 0.6); 
+    padding: 30px;
+    text-align: center;
+    width: 95%;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  .banner h1 {
+    font-size: 3.5em;
+    margin: 0;
+    font-weight: 800;
+  }
+
+  .banner p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-weight: 400;
+  }
+
+</style>
+<body>
+  <header class="banner">
+    <div class="overlay d-flex align-items-center justify-content-center text-center">
+      <img src="img/dawd2.png" alt="Makiroll Logo" style="width: 200px; height: auto; margin-right: 15px;">
+      <div>
+        <h1>MAKIIROLL</h1>
+        <p>Roll เกมไหนก็ได้ ที่ MAKIIROLL</p>
+      </div>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="First Page.html"><i class="fas fa-home"></i> หน้าแรก</a></li>
+      <li><a href="News Page.html"><i class="fas fa-gamepad"></i> เกมมาใหม่</a></li>
+      <li><a href="News Tech.html"><i class="fas fa-laptop"></i> เทคโนโลยีล่าสุด</a></li>
+      <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> เข้าสู่ระบบ</a></li> 
+      <li><a href="ร้านค้า.html"><i class="fas fa-store"></i> ร้านค้า</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1><i class="fas fa-gamepad"></i> เกมแนะนำ</h1>
+    <div class="slider-container">
+      <button class="nav prev">&lt;</button>
+      <div class="popup" id="game-popup">
+        <div class="main-image">
+          <img id="main-img" src="" alt="Main Game Image"  style="height: 250px; width: 420px; object-fit: cover;">
+        </div>
+        <div class="details">
+          <h2 id="game-title">Game Title</h2>
+          <p class="price" id="price"></p>
+          <div class="thumbnails" id="thumbs"></div>
+          <a href="ร้านค้า.html" class="btn btn-success d-block mt-3" style="max-width: 200px; margin-left: auto;"> 
+            <i class="fas fa-cart-plus"></i> เพิ่มลงในตะกร้า
+          </a>            
+        </div>
+      </div>
+      <button class="nav next">&gt;</button>
+    </div>
+    <h1 style="text-align: center;">💡เทคโนโลยีที่น่าสนใจ</h1>
+    <div class="slider-container">
+      <button class="nav tech-prev">&lt;</button>
+      <div class="popup" id="tech-popup">
+        <div class="main-image">
+          <img id="tech-main-img" src="" alt="Main Tech Image" style="height: 250px; width: 420px; object-fit: cover;">
+        </div>
+        <div class="details">
+          <h2 id="tech-title">Tech Title</h2>
+         <p class="price" id="tech-price"></p> 
+          <div class="thumbnails" id="tech-thumbs"></div>
+          <a href="ร้านค้า.html" class="btn btn-success d-block mt-3" style="max-width: 200px; margin-left: auto;"> 
+            <i class="fas fa-cart-plus"></i> เพิ่มลงในตะกร้า
+          </a>          
+        </div>
+      </div>      
+      <button class="nav tech-next">&gt;</button>
+    </div>
+    </div>
+    <script src="js.js"></script>
+  </main>
+  <footer class="text-center py-4 text-white bg-dark">
+    <p>© 2025 Game & Technology - by MAKIROLL TEAM</p>
+  </footer>
+</body>
+</html>
+

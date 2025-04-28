@@ -1,0 +1,218 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    background: linear-gradient(180deg, #541c90 , #2b0b40 );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+  }
+
+  .slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  .popup {
+    display: flex;
+    background-color: #2a475e;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 900px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.9);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  .main-image img {
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  .details {
+    padding: 20px;
+    flex: 1;
+  }
+  
+  #game-title {
+    margin-top: 0;
+    font-size: 28px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  .thumbnails {
+    display: flex;
+    gap: 11px;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  .thumbnails img {
+    height: 50px;
+    width: 100px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .thumbnails img:hover {
+    border-color: white;
+    transform: scale(1.1); 
+  }
+  
+  .price {
+    font-size: 20px;
+    color: #00ffcc;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  .nav {
+    font-size: 30px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .cart-button {
+    background-color:#00ffcc;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .cart-button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .cart-button:hover {
+    background-color: #417a9b;
+    transform: scale(1.05);
+  }
+  
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  nav {
+    background: #230422; 
+    padding: 15px 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  nav ul li a:hover {
+    color: #ffeb3b;
+  }
+  
+  h1 {
+    margin-top: 50px; 
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  P {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  .overlay {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  .nav {
+    font-size: 28px;
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav:hover {
+    transform: scale(1.5);
+    color: #00ffcc;
+  }
+  
+  footer {
+    background: #111;
+    text-align: center;
+    padding: 15px;
+    color: #aaa;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  nav ul li {
+    margin: 0 40px;
+  }
+  

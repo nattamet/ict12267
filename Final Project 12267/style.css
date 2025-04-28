@@ -1,0 +1,161 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #000000, #4887df);
+  color: #fff;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  padding: 30px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #ddd;
+}
+
+nav {
+  background: #230422; 
+  padding: 15px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+nav ul li {
+  margin: 0 40px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+nav ul li a i {
+  margin-right: 10px; 
+}
+
+nav ul li a:hover {
+  color: #ffeb3b; 
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+article {
+  background: #2a2a3d;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+article img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+article h3 {
+  margin-top: 10px;
+  color: #00d8ff;
+}
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}
+
+.modal-content {
+  background: linear-gradient(to top, #182325, #770000);
+  color: rgb(255, 255, 255);
+}
+
+.modal-header, .modal-footer {
+  border-color: #182325;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.modal-body {
+  max-height: 65vh;
+  overflow-y: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #303030;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
+
+@keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+h2{
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.card.h-100.shadow-sm {
+  opacity: 0; 
+  animation: fadeIn 1s ease forwards;
+}
+

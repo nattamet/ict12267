@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เกม & เทคโนโลยี</title>
+
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+      background: linear-gradient(-45deg, #e35cfb, #6a00ff2c, #000076, #024398);
+      background-size: 400% 400%;
+      animation: fireMove 6s ease infinite;
+    }
+
+    @keyframes fireMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .banner {
+      position: relative;
+      height: 300px;
+      background-image: url('/img/download_11.gif');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .banner .overlay {
+      background: rgba(29, 8, 60, 0.6);
+      padding: 30px;
+      text-align: center;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .banner h1, .banner p {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    nav {
+      background: #230422;
+      padding: 1px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 24px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 15px;
+      display: block;
+    }
+
+    nav ul li a:hover {
+      background: #444;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="banner">
+    <div class="overlay d-flex align-items-center justify-content-center text-center">
+      <img src="img/dawd2.png" alt="Makiroll Logo" style="width: 200px; height: auto; margin-right: 15px;">
+      <div>
+        <h1>MAKIIROLL</h1>
+        <p>Roll เทคโนโลยีไหนก็ได้ ที่ MAKIIROLL</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="First Page.html"><i class="fas fa-home"></i> หน้าแรก</a></li>
+      <li><a href="News Page.html"><i class="fas fa-gamepad"></i> เกมมาแรง</a></li>
+      <li><a href="News Tech.html"><i class="fas fa-laptop"></i> เทคโนโลยีล่าสุด</a></li>
+      <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> เข้าสู่ระบบ</a></li>
+      <li><a href="ร้านค้า.html"><i class="fas fa-store"></i> ร้านค้า</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container py-5">
+    <section id="product">
+      <h2 class="text-center mb-4">
+        <i class="bi bi-cpu"></i> เทคโนโลยีล่าสุด <i class="bi bi-cpu"></i>
+      </h2>
+
+      <div class="row g-4">
+
+        <!-- VR -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img/vr2.jpeg" class="card-img-top" alt="VR">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Virtual Reality (VR)</h5>
+              <p class="card-text">เทคโนโลยีที่จำลองสภาพแวดล้อมเสมือนจริง ทั้งจากจินตนาการและของจริง!</p>
+              <a href="#" class="btn btn-primary mt-auto w-100" data-bs-toggle="modal" data-bs-target="#modalVR">ดูเพิ่มเติม</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mouse -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img/VXE1.jpg" class="card-img-top" alt="Mouse">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">VXE DRAGONFLY R1 PRO</h5>
+              <p class="card-text">น้ำหนักเบา ดีไซน์ทันสมัย พร้อมลุยทุกสนามแข่งขัน!</p>
+              <a href="#" class="btn btn-primary mt-auto w-100" data-bs-toggle="modal" data-bs-target="#modalMouse">ดูเพิ่มเติม</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ryzen -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img/Ryzen.jpg" class="card-img-top" alt="Ryzen 9800x3d">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Ryzen 9800x3d</h5>
+              <p class="card-text">ซีพียูตัวแรง 8 คอร์ 16 เธรด ความเร็วสูงสุด 5.2GHz!</p>
+              <a href="#" class="btn btn-primary mt-auto w-100" data-bs-toggle="modal" data-bs-target="#modalRyzen">ดูเพิ่มเติม</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal VR -->
+  <div class="modal fade" id="modalVR" tabindex="-1" aria-labelledby="modalVRLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalVRLabel">Virtual Reality (VR)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="ปิด"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/vr2.jpeg" class="img-fluid mb-3" alt="VR">
+          <p>VR คือเทคโนโลยีจำลองสภาพแวดล้อมแบบเสมือนจริง ที่ให้คุณได้สัมผัสประสบการณ์ใหม่ๆ ทั้งในเกม การศึกษา หรือการแพทย์</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+          <a href="ร้านค้า.html" target="_blank" class="btn btn-success">
+            <i class="bi bi-cart me-1"></i> ซื้อ
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Mouse -->
+  <div class="modal fade" id="modalMouse" tabindex="-1" aria-labelledby="modalMouseLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalMouseLabel">เมาส์เกมมิ่งสุดล้ำ</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="ปิด"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/VXE2.jpg" class="img-fluid mb-3" alt="Mouse">
+          <p>เมาส์เกมมิ่งออกแบบมาเบา จับกระชับมือ มีความเร็วตอบสนองที่ยอดเยี่ยม เหมาะสำหรับการแข่งเกมระดับสูง</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+          <a href="ร้านค้า.html" target="_blank" class="btn btn-success">
+            <i class="bi bi-cart me-1"></i> ซื้อ
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Ryzen -->
+  <div class="modal fade" id="modalRyzen" tabindex="-1" aria-labelledby="modalRyzenLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalRyzenLabel">Ryzen 9800x3d</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="ปิด"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/Ryzen.jpg" class="img-fluid mb-3" alt="Ryzen 9800x3d">
+          <p>Ryzen 9800x3d ซีพียูตัวแรงจาก AMD เหมาะกับเกมเมอร์และสายทำงานที่ต้องการพลังประมวลผลขั้นสูง</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+          <a href="ร้านค้า.html" target="_blank" class="btn btn-success">
+            <i class="bi bi-cart me-1"></i> ซื้อ
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="text-center py-4 text-white bg-dark">
+    <p>© 2025 Game & Technology - by MAKIROLL TEAM</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

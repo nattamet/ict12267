@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>ร้านค้าออนไลน์</title>
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+      background-attachment: fixed;
+      color: #333
+    }
+
+    header {
+      background: #008cba;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      margin-left: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .product-list {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      width: 200px;
+      text-align: center;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    button {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background: #218838;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgba(33, 136, 56, 0.4);
+    }
+
+
+    .filters {
+      width: 200px;
+      margin-right: 20px;
+      background: white;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 15px;
+      width: 220px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .product-card h2 {
+      font-size: 1.1rem;
+      margin: 10px 0 5px;
+    }
+    .product-card p {
+      margin: 5px 0 10px;
+    }
+    .product-card button {
+      margin-top: auto; 
+    }
+    h2 {
+      font-size: 1.2rem;
+      margin: 10px 0 5px;
+    }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+          <li><a href="First Page.html"><i class="fas fa-home"></i>หน้าแรก</a></li>
+          <li><a href="News Page.html"><i class="fas fa-gamepad"></i>เกมมาแรง</a></li>
+          <li><a href="News Tech.html"><i class="fas fa-laptop"></i>เทคโนโลยีล่าสุด</a></li>
+          <li><a href="login.html"><i class="fas fa-sign-in-alt"></i>เข้าสู่ระบบ</a></li> 
+          <li><a href="ร้านค้า.html"><i class="fas fa-store"></i>ร้านค้า</a></li>
+        </ul>
+      </nav>      
+  </header>
+  <main style="display: flex; padding: 20px;">
+    <aside class="filters">
+      <h3>กรองสินค้า</h3>
+      <label><input type="checkbox" class="filter-type" value="type-a"> ประเภท A</label><br>
+      <label><input type="checkbox" class="filter-type" value="type-b"> ประเภท B</label><br>
+      <label><input type="checkbox" class="filter-price" value="low"> ต่ำกว่า 400</label><br>
+      <label><input type="checkbox" class="filter-price" value="high"> มากกว่า 400</label>
+    </aside>
+
+    <!-- Product List -->
+    <section class="product-list">
+      <div class="product-card">
+        <img src="img/Elden.jpg" alt="ปกเกม Elden Ring">
+        <h2>Elden Ring</h2>
+        <p>ราคา: 1,790 บาท</p>
+        <button>เพิ่มลงในรถเข็น</button>
+      </div>
+
+      <div class="product-card">
+        <img src="img/Mon.jpg" alt="ปกเกม Monster Hunter Wilds">
+        <h2>Monster Hunter Wilds</h2>
+        <p>ราคา: 1,990 บาท</p>
+        <button>เพิ่มลงในรถเข็น</button>
+      </div>
+
+      <div class="product-card">
+        <img src="img/Red.jpg" alt="ปกเกม Red Dead Redemption 2">
+        <h2>Red Dead Redemption 2</h2>
+        <p>ราคา: 1,899 บาท</p>
+        <button>เพิ่มลงในรถเข็น</button>
+      </div>
+
+      <div class="product-card">
+        <img src="img/REPO.jpg" alt="ปกเกม R.E.P.O">
+        <h2>R.E.P.O</h2>
+        <p>ราคา: 220 บาท</p>
+        <button>เพิ่มลงในรถเข็น</button>
+      </div>
+
+      <div class="product-card">
+        <img src="img/ELderscoll.jpg" alt="ปกเกม The Elder Scrolls IV">
+        <h2>The Elder Scrolls IV: Oblivion Remastered</h2>
+        <p>ราคา: 1,290 บาท</p>
+        <button>เพิ่มลงในรถเข็น</button>
+      </div>
+
+      <div class="product-card">
+        <img src="img/rk.jpg" alt="ปกเกม God of War Ragnarok">
+        <h2>God of War Ragnarök</h2>
+        <p>ราคา: 1,690 บาท</p>
+        <button>เพิ่มลงในรถเข็น</button>
+      </div>
+
+      <div class="product-card">
+        <img src="img/p5.jpg" alt="PlayStation 5">
+        <h2>PlayStation 5</h2>
+        <p>ราคา: 12,990 บาท</p>
+        <button>เพิ่มลงในรถเข็น</button>
+      </div>
+
+      <div class="product-card">
+        <img src="img/vr3.jpg" alt="Meta Quest 3">
+        <h2>Meta Quest 3</h2>
+        <p>ราคา: 23,990 บาท</p>
+        <button>เพิ่มลงในรถเข็น</button>
+      </div>
+
+      <div class="product-card">
+        <img src="img/ai.jpg" alt="Nintendo Switch">
+        <h2>Nintendo Switch</h2>
+        <p>ราคา: 12,990 บาท</p>
+        <button>เพิ่มลงในรถเข็น</button>
+      </div>
+
+      <div class="product-card">
+        <img src="img/xbx.jpg" alt="Xbox Series X">
+        <h2>Xbox Series X</h2>
+        <p>ราคา: 19,990 บาท</p>
+        <button>เพิ่มลงในรถเข็น</button>
+      </div>
+
+      <div class="product-card">
+        <img src="img/noin.jpg" alt="Lenovo Legion go S">
+        <h2>Lenovo Legion go S</h2>
+        <p>ราคา: 25,990 บาท</p>
+        <button>เพิ่มลงในรถเข็น</button>
+      </div>
+
+      <div class="product-card">
+        <img src="img/samsung.jpg" alt="Samsung Odyssey G5">
+        <h2>Samsung Odyssey G5</h2>
+        <p>ราคา: 9,900 บาท</p>
+        <button>เพิ่มลงในรถเข็น</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
